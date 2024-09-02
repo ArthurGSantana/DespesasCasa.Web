@@ -1,0 +1,113 @@
+// BUTTONS
+.btn-regular {
+  height: 34px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: background-color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: $white;
+  @extend .btn-regular;
+
+  &:hover {
+    background-color: $primary-tint;
+  }
+
+  &:active {
+    background-color: $primary-shade;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $primary-tint;
+  }
+
+  &:disabled {
+    background-color: $neutral-disabled-1;
+    color: $neutral-disabled-2;
+    cursor: default;
+  }
+}
+
+.btn-secondary {
+  background-color: $white;
+  border: 1px solid $primary;
+  color: $primary;
+  @extend .btn-regular;
+
+  &:hover {
+    background-color: $primary-tint-5;
+  }
+
+  &:active {
+    background-color: $primary-tint-4;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $white;
+    border-color: $primary-tint-2;
+  }
+
+  &:disabled {
+    background-color: $neutral-disabled-3;
+    color: $neutral-disabled-4;
+    border-color: $neutral-disabled-1;
+    cursor: default;
+  }
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: none;
+  }
+
+  &:disabled {
+    background: none;
+  }
+}
+
+.btn-radio {
+  background-color: $primary;
+  border: none;
+  padding: 0;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $primary-tint;
+  }
+
+  &:active {
+    background-color: $primary-shade;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $primary-tint;
+  }
+
+  &:disabled {
+    background-color: $neutral-disabled-1;
+    color: $neutral-disabled-2;
+    cursor: default;
+  }
+}

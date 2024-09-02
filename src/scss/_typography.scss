@@ -1,0 +1,125 @@
+//Font Weight
+.font-light {
+  font-weight: 400;
+}
+
+.font-regular {
+  font-weight: 500;
+}
+
+.font-semi-bold {
+  font-weight: 600 !important;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+//Font Size
+$size: (
+  nano: 12px,
+  small: 14px,
+  normal: 16px,
+  medium: 18px,
+  large: 20px,
+  large-xs: 24px,
+  large-sm: 32px,
+  large-md: 40px,
+  large-lg: 48px,
+  large-xl: 56px
+);
+
+@each $key, $value in $size {
+  .font-#{$key} {
+    font-size: #{$value};
+  }
+}
+
+@for $i from 1 through 56 {
+  .font-size-#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+.font-validation {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+//Font Color
+.font-primary {
+  color: $neutral-default;
+}
+
+.font-secondary {
+  color: $neutral-black;
+}
+
+.font-black {
+  color: $black;
+}
+
+.font-white {
+  color: $white;
+}
+
+.font-success {
+  color: $success;
+}
+
+.font-info {
+  color: $info;
+}
+
+.font-error {
+  color: $error;
+  line-height: 6px !important;
+}
+
+.font-warning {
+  color: $warning;
+}
+
+.font-accent {
+  color: $accent;
+}
+
+.font-link {
+  color: $primary;
+}
+
+.font-small {
+  color: $neutral-disabled-2;
+}
+
+//Font Position
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+//Line Height
+@for $i from 1 through 56 {
+  .line-height-#{$i} {
+    line-height: #{$i}px;
+  }
+}
+
+//blocks
+.title-private {
+  font-size: 24px;
+  font-weight: 700;
+  color: $neutral-default;
+}
+
+.font-nowrap {
+  white-space: nowrap;
+}
+
+a {
+  color: $primary;
+  cursor: pointer;
+}

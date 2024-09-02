@@ -1,0 +1,56 @@
+$directions: row, column;
+$justifies: space-between, center, flex-start, flex-end, space-evenly,
+  space-around;
+$aligns: center, flex-start, flex-end;
+
+.d-flex {
+  display: flex;
+}
+
+.row {
+  @extend .d-flex;
+  flex-direction: row;
+}
+
+.column {
+  @extend .d-flex;
+  flex-direction: column;
+}
+
+@each $direction in $directions {
+  .direction-#{$direction} {
+    flex-direction: $direction;
+  }
+}
+
+@each $justify in $justifies {
+  .justify-#{$justify} {
+    justify-content: $justify;
+  }
+}
+
+@each $align in $aligns {
+  .align-#{$align} {
+    align-items: $align;
+  }
+}
+
+@for $i from 1 through 100 {
+  .basis-#{$i} {
+    flex-basis: #{$i}+ "%" !important;
+  }
+}
+
+@for $i from 1 through 12 {
+  .flex-#{$i} {
+    flex: #{$i} !important;
+  }
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}

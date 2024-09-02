@@ -1,0 +1,96 @@
+//Primary-color
+$primary: #420c9b;
+
+$primary-shade: #380c80;
+$primary-shade-1: #2b0963;
+$primary-shade-2: #200947;
+$primary-shade-3: #15092b;
+
+$primary-tint: #5827a5;
+$primary-tint-1: #9374c6;
+$primary-tint-2: #b7a2d9;
+$primary-tint-3: #cab9e3;
+$primary-tint-4: #ddd2ec;
+$primary-tint-5: #ede1fe;
+$primary-tint-6: #f4ecff;
+
+//Secondary-color
+$secondary: #0051e5;
+
+$secondary-shade: #0048ca;
+$secondary-shade-1: #073da0;
+$secondary-shade-2: #083483;
+
+$secondary-tint: #2d6fe9;
+$secondary-tint-1: #568df2;
+$secondary-tint-2: #74a3fb;
+$secondary-tint-3: #a5c2f6;
+
+//Gradients
+$gradient-primary: linear-gradient(90deg, $primary, $secondary);
+$gradient-secondary: linear-gradient(90deg, $secondary, $primary);
+
+//State Colors
+$success: #33b469;
+$success-bg: #33b4691a;
+$success-snack-bg: #d0ffe4;
+
+$info: #3e7bec;
+$info-bg: #3e7bec1a;
+$info-snack-bg: #aac7fc;
+
+$error: #ed3a3a;
+$error-bg: #ed3a3a1a;
+$error-snack-bg: #ffe2e2;
+
+$warning: #ff4814;
+$accent: #c79600;
+
+//Neutral Colors
+$neutral-default: #4e5969;
+$neutral-black: #2b313a;
+
+$neutral-disabled-1: #e5e6eb;
+$neutral-disabled-2: #86909c;
+$neutral-disabled-3: #f2f3f5;
+$neutral-disabled-4: #a9aeb8;
+$neutral-disabled-5: #f3f3f3;
+$neutral-disabled-6: #eaebee;
+
+$neutral-input-1: #c9cdd4;
+
+$neutral-check-hover: #ecebeb;
+
+$neutral-line: #d9dbe9;
+
+//Default Colors
+$white: #ffffff;
+$black: #000000;
+$black-shadow: #0000000d;
+
+//Background Colors
+$bg-primary: #f3f3f3;
+$bg-secondary: #f6f6f6;
+$bg-tertiary: #eeeeee;
+$bg-loader-public: #ffffff4a;
+$bg-loader-private: rgb(255 255 255 / 42%);
+
+.bg-gradient {
+  background: $gradient-secondary;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-success {
+  background-color: $success-bg;
+}
+
+.bg-info {
+  background-color: $info-bg;
+}
+
+.bg-error {
+  background-color: $error-bg;
+}
