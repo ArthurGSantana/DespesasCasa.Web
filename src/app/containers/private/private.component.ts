@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { LoaderComponent } from "../../shared/core/loader/loader.component";
 import { LoaderService } from "../../services/loader.service";
+import { PrivateHeaderComponent } from "../../shared/core/private-header/private-header.component";
 
 @Component({
   selector: 'app-private',
@@ -10,7 +11,8 @@ import { LoaderService } from "../../services/loader.service";
   imports: [
     CommonModule,
     RouterModule,
-    LoaderComponent
+    LoaderComponent,
+    PrivateHeaderComponent
 ],
   templateUrl: './private.component.html',
   styleUrl: './private.component.scss',
