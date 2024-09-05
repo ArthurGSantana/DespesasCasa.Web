@@ -1,0 +1,7 @@
+<div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet" />
+</div>
+
+@if (loaderService.loading()) {
+ <app-loader type="public" />
+}

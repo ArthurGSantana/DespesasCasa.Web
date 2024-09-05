@@ -1,0 +1,13 @@
+<section>
+  <div class="header">
+    <app-header-private />
+  </div>
+
+  <div class="page" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet" />
+  </div>
+</section>
+
+@if (loaderService.loading()) {
+<app-loader type="private" />
+}
