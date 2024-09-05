@@ -5,7 +5,6 @@
     [(ngModel)]="value"
     (ngModelChange)="value = $event; onChange($event)"
     [placeholder]="placeholder"
-    [mask]="mask"
     [max]="max"
     (blur)="onTouched()"
     [disabled]="isDisabled"
