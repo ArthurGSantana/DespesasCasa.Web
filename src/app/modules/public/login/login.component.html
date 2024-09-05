@@ -1,1 +1,32 @@
-<p>login works!</p>,
+<section class="w-full d-flex justify-center align-center h-full login-ctn">
+  <div class="box-login">
+    <form [formGroup]="form" class="column justify-center align-center">
+      <span class="font-size-24 py-10 px-20 font-semi-bold">Login</span>
+      <div class="column row-gap-24 py-36">
+        <div class="column box-input">
+          <label class="label-default">E-mail</label>
+          <app-input
+            formControlName="email"
+            [control]="form.controls['email']"
+          />
+        </div>
+        <div class="column box-input">
+          <label class="label-default">Senha</label>
+          <app-input-password
+            formControlName="password"
+            [noCopyPaste]="false"
+          />
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="form.invalid"
+        class="btn-primary"
+        (click)="onSubmit()"
+      >
+        Entrar
+      </button>
+    </form>
+  </div>
+</section>

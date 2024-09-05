@@ -1,0 +1,25 @@
+<div class="d-flex direction-column w-full position-relative">
+  <input
+    [type]="inputType"
+    class="input-custom"
+    [(ngModel)]="value"
+    (ngModelChange)="value = $event; onChange($event)"
+    [placeholder]="placeholder"
+    [mask]="mask"
+    [max]="max"
+    (blur)="onTouched()"
+    [disabled]="isDisabled"
+  />
+
+  @if (control && control.invalid && control.touched && control.errors) {
+    <span class="font-error font-validation pt-4 pl-1">
+      @if (control.errors['required']) {Campo obrigatório!}
+      @if (control.errors['email']) {E-mail inválido!}
+      @if (control.errors['minlength']) {Mínimo {{control.errors['minlength'].requiredLength}} caracteres!}
+      @if (control.errors['maxlength']) {Máximo {{control.errors['maxlength'].requiredLength}} caracteres!}
+      @if (control.errors['cnpj']) {CNPJ inválido!}
+      @if (control.errors['emptyValue']) {Valor inválido!}
+      @if (control.errors['duplicate']) {Valor já inserido!}
+    </span>
+  }
+</div>
