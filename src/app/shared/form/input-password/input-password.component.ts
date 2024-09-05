@@ -11,6 +11,7 @@ import {
   FormsModule,
   NG_VALUE_ACCESSOR
 } from '@angular/forms';
+import { NoCopyPasteDirective } from '../../../core/directives/noCopyPaste.directive';
 
 @Component({
   selector: 'app-input-password',
